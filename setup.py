@@ -37,16 +37,16 @@ if __name__ == '__main__':
     home_dir = os.path.expanduser('~')
     print 'Home dir: %s' % home_dir
     print 'Config dir: %s' % config_dir
-    
+
     # make symlinks in home directory to config files
     link_in_home('vim/.vimrc', '.vimrc')
     link_in_home('tmux/tmux.conf', '.tmux.conf')
     link_in_home('git/.gitconfig', '.gitconfig')
 
-    # have ipython call my stuff on startup
-    #  needs to be updated for new ipython config structure...
-    #ipythonrc_filename = os.path.join(home_dir, '.ipython/ipythonrc')
-    #text = 'execfile %s' % os.path.join(home_dir, 'config/ipython/startup')
-    #insert_text_in_file(ipythonrc_filename, text, '#')
-    
+    # have bash call my stuff on startup
+    bashrc_filename = os.path.join(home_dir, '.bashrc')
+    text = 'source %s' % os.path.join(home_dir, 'config/bash/bashrc')
+    insert_text_in_file(bashrc_filename, text, '#')
+
+
 
