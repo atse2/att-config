@@ -40,6 +40,7 @@ if __name__ == '__main__':
 
     # make symlinks in home directory to config files
     link_in_home('vim/.vimrc', '.vimrc')
+    link_in_home('vim', '.vim')
     link_in_home('tmux/tmux.conf', '.tmux.conf')
     link_in_home('git/.gitconfig', '.gitconfig')
 
