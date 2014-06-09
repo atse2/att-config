@@ -48,7 +48,10 @@ function dev()
     elif [ -e src-build ]
     then
       source src-build/devel/setup.bash
-    else
+    elif [ -e devel/setup.bash ]
+    then
       source ./devel/setup.bash
+    else
+      source ./devel_isolated/setup.bash
     fi
 }
